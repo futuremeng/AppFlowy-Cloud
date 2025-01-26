@@ -6,8 +6,9 @@ use serde::de::DeserializeOwned;
 use std::time::Duration;
 use tiktoken_rs::CoreBPE;
 use unicode_segmentation::UnicodeSegmentation;
+use crate::config::{get_env_var};
 
-pub const OPENAI_EMBEDDINGS_URL: &str = "https://api.openai.com/v1/embeddings";
+pub const OPENAI_EMBEDDINGS_URL: &str = get_env_var("AI_OPENAI_EMBEDDINGS_URL","https://api.openai.com/v1/embeddings");
 
 pub const REQUEST_PARALLELISM: usize = 40;
 

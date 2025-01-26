@@ -169,6 +169,7 @@ services:
     restart: on-failure
     image: appflowyinc/appflowy_ai:${APPFLOWY_AI_VERSION:-latest}
     environment:
+      - OPENAI_EMBEDDINGS_URL=${AI_OPENAI_EMBEDDINGS_URL}
       - OPENAI_API_KEY=${AI_OPENAI_API_KEY}
       - APPFLOWY_AI_SERVER_PORT=${AI_SERVER_PORT}
       - APPFLOWY_AI_DATABASE_URL=${AI_DATABASE_URL}
