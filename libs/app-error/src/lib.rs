@@ -431,6 +431,9 @@ pub enum ErrorCode {
   ApplyUpdateError = 1056,
   ActionTimeout = 1057,
   AIImageResponseLimitExceeded = 1058,
+  MailerError = 1059,
+  LicenseError = 1060,
+  AIMaxRequired = 1061,
 }
 
 impl ErrorCode {
